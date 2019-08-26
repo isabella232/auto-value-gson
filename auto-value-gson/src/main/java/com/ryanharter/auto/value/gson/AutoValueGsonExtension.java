@@ -263,7 +263,7 @@ public class AutoValueGsonExtension extends AutoValueExtension {
     defaultSetters = Boolean.parseBoolean(context.processingEnvironment().getOptions()
         .getOrDefault(MUTABLE_ADAPTERS_WITH_DEFAULT_SETTERS, "false"));
     collectionsDefaultToEmpty = Boolean.parseBoolean(env.getOptions()
-        .getOrDefault(COLLECTIONS_DEFAULT_TO_EMPTY, "false"));
+        .getOrDefault(COLLECTIONS_DEFAULT_TO_EMPTY, "true"));
     Optional<AnnotationSpec> generatedAnnotationSpec = GeneratedAnnotations.generatedAnnotation(env.getElementUtils())
         .map(AutoValueGsonExtension::createGeneratedAnnotationSpec);
     TypeElement type = context.autoValueClass();
